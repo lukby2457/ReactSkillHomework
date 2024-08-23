@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { usePokemon } from '../context/PokemonContext'
 
 const Card = styled.div`
   width: 155px;
@@ -45,7 +46,8 @@ const CardButton = styled.button`
   }
 `
 
-const PokemonCard = ({ pokemon, click, isSelected }) => {
+const PokemonCard = ({ pokemon, isSelected }) => {
+  const { addPokemon, removePokemon } = usePokemon();
   const navigate = useNavigate();
   const formattedNumber = String(pokemon.id).padStart(3, '0');
 
@@ -57,12 +59,12 @@ const PokemonCard = ({ pokemon, click, isSelected }) => {
       {isSelected ? (
         <CardButton type='button' onClick={(e) => {
           e.stopPropagation();
-          click(pokemon);
+          removePokemon(pokemon);
         }}>삭제</CardButton>
       ) : (
         <CardButton type='button' onClick={(e) => {
           e.stopPropagation();
-          click(pokemon);
+          addPokemon(pokemon);
         }}>추가</CardButton>
       )}
     </Card>

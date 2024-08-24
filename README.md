@@ -1,8 +1,12 @@
-# React + Vite
+# Pokemon_Dex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 배포주소
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 작업기간
+24.08.21(수요일) ~ 24.08.27(화요일)
+
+## 주요 기능
+1. 사용자가 카드의 추가 버튼을 누르면 나만의 포켓몬 영역에 선택한 포켓몬 카드를 표시한다
+2. 사용자가 나만의 포켓몬의 삭제 버튼을 누르면 선택한 포켓몬 카드를 삭제한다
+3. 사용자가 전체 리스트, 나만의 포켓몬의 카드를 클릭하면 상세정보 페이지로 이동한다

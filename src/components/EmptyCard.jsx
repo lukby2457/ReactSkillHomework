@@ -21,7 +21,7 @@ const CardImage = styled.img`
 const EmptyCard = () => {
   return (
     <Card>
-      <CardImage src='/src/assets/pokeball-13iwdk7Y.png' />
+      <CardImage src='../src/assets/pokeball-13iwdk7Y.png' />
     </Card>
   )
 }

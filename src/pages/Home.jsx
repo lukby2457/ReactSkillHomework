@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <Img src='/src/assets/pokemon-logo-RN0wntMB.png' />
+      <Img src='../src/assets/pokemon-logo-RN0wntMB.png' />
       <HomeButton onClick={() => navigate('/dex')}>포켓몬 도감 시작하기</HomeButton>
     </HomeContainer>
   )

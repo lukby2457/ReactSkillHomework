@@ -1,6 +1,8 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { addPokemon, removePokemon } from '../redux/slices/selectedPokemonSlice'
 
 const Card = styled.div`
   width: 155px;
@@ -45,9 +47,18 @@ const CardButton = styled.button`
   }
 `
 
-const PokemonCard = ({ pokemon, click, isSelected }) => {
+const PokemonCard = ({ pokemon, isSelected }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const formattedNumber = String(pokemon.id).padStart(3, '0');
+
+  const handleAddPokemon = (pokemon) => {
+    dispatch(addPokemon(pokemon));
+  }
+
+  const handleRemovePokemon = (pokemon) => {
+    dispatch(removePokemon(pokemon));
+  }
 
   return (
     <Card onClick={() => navigate(`/pokemon-detail?id=${pokemon.id}`)}>
@@ -57,12 +68,12 @@ const PokemonCard = ({ pokemon, click, isSelected }) => {
       {isSelected ? (
         <CardButton type='button' onClick={(e) => {
           e.stopPropagation();
-          click(pokemon);
+          handleRemovePokemon(pokemon);
         }}>삭제</CardButton>
       ) : (
         <CardButton type='button' onClick={(e) => {
           e.stopPropagation();
-          click(pokemon);
+          handleAddPokemon(pokemon);
         }}>추가</CardButton>
       )}
     </Card>

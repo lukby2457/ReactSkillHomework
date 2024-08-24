@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from 'styled-components'
 import PokemonCard from './PokemonCard';
 import EmptyCard from './EmptyCard';
+import { useSelector } from 'react-redux';
 
 const DashBoardContainer = styled.div`
   background-color: #ebebeb;
@@ -22,9 +23,10 @@ const ListContainer = styled.div`
   color: #333333;
 `
 
-const Dashboard = ({ selectedPokemon, onRemovePokemon }) => {
-  let emptyArray = new Array(6 - selectedPokemon.length);
-  emptyArray = [...selectedPokemon, ...emptyArray];
+const Dashboard = () => {
+  const PokemonList = useSelector((state) => state.selectedPokemon.selectedPokemon);
+  let emptyArray = new Array(6 - PokemonList.length);
+  emptyArray = [...PokemonList, ...emptyArray];
 
   return (
     <DashBoardContainer>
@@ -37,7 +39,6 @@ const Dashboard = ({ selectedPokemon, onRemovePokemon }) => {
             return <PokemonCard
               key={object.id}
               pokemon={{ ...object }}
-              click={onRemovePokemon}
               isSelected={true}
             />
           }

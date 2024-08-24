@@ -13,7 +13,7 @@ const ListContainer = styled.div`
   align-self: center;
 `
 
-const PokemonList = ({ PokemonList, onAddPokemon }) => {
+const PokemonList = ({ PokemonList }) => {
   return (
     <ListContainer>
       {
@@ -21,7 +21,6 @@ const PokemonList = ({ PokemonList, onAddPokemon }) => {
           <PokemonCard 
             key={pokemon.id} 
             pokemon={{...pokemon}} 
-            click={onAddPokemon}
             isSelected={false}
           />
         ))

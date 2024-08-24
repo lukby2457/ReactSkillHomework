@@ -1,7 +1,7 @@
 # Pokemon_Dex
 
 ## 배포주소
-
+<https://pokemon-dex-lukby2457.vercel.app/>
 
 ## 작업기간
 24.08.21(수요일) ~ 24.08.27(화요일)

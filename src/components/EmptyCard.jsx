@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import pokeball from '../assets/pokeball-13iwdk7Y.png'
 
 const Card = styled.div`
   width: 155px;
@@ -21,7 +22,7 @@ const CardImage = styled.img`
 const EmptyCard = () => {
   return (
     <Card>
-      <CardImage src='../src/assets/pokeball-13iwdk7Y.png' />
+      <CardImage src={pokeball} />
     </Card>
   )
 }

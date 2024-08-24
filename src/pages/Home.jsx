@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import logo from '../assets/pokemon-logo-RN0wntMB.png';
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -35,7 +36,7 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <Img src='../src/assets/pokemon-logo-RN0wntMB.png' />
+      <Img src={logo} />
       <HomeButton onClick={() => navigate('/dex')}>포켓몬 도감 시작하기</HomeButton>
     </HomeContainer>
   )

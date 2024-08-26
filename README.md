@@ -7,9 +7,9 @@
 24.08.21(수요일) ~ 24.08.27(화요일)
 
 ## 브랜치 설명
-main : redux-toolkit을 기반으로 세부설정이 적용되어 있는 메인코드 입니다.
-props-drilling : props-drilling 방식으로 개발한 코드가 작성되어 있습니다.
-context : props-drilling 방식으로 개발한 코드를 Context API를 활용하여 리펙토링한 코드가 작성되어 있습니다.
+main : redux-toolkit을 기반으로 세부설정이 적용되어 있는 메인코드 입니다.<br/>
+props-drilling : props-drilling 방식으로 개발한 코드가 작성되어 있습니다.<br/>
+context : props-drilling 방식으로 개발한 코드를 Context API를 활용하여 리펙토링한 코드가 작성되어 있습니다.<br/>
 redux-toolkit : props-drilling 방식으로 개발한 코드를 Redux-toolkit을 활용하여 리펙토링한 코드가 작성되어 있습니다.
 
 ## 주요 기능

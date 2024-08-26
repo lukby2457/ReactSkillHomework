@@ -12,7 +12,7 @@ const selectedPokemonSlice = createSlice({
       if(state.selectedPokemon.length < 6) {
         if(!selectedPokemonId.some((id) => id === action.payload.id)) {
           state.selectedPokemon.push(action.payload);
-        } else alert("포켓몬은 중복으로 선택할 수 없습니다.");
+        } else alert("포켓몬을 중복으로 선택할 수 없습니다.");
       } else alert("포켓몬은 최대 여섯개까지만 선택 할 수 있습니다.");
     },
     removePokemon: (state, action) => {

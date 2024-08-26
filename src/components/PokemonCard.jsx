@@ -8,13 +8,17 @@ const Card = styled.div`
   width: 155px;
   height: 250px;
   background-color: beige;
-  color: #333333;
+  color: #444444;
   padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px;
+  }
 `
 
 const CardImage = styled.img`
